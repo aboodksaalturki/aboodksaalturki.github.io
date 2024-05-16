@@ -3,60 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر البدلات | الصفحة الرئيسية</title> 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+    <title>متجر البدلات | الصفحة الرئيسية</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>متجر البدلات</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="product.html">المنتجات</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-                <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                <li><a href="about.html">عن المتجر</a></li>
-            </ul>
-        </nav>
+        <div class="container"> 
+            <h1><img src="images/logo.png" alt="Logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="product.html">المنتجات</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="about.html">عن المتجر</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <section class="hero">
+            <div class="container">
+                <h2>أحدث صيحات الموضة في عالم البدلات</h2>
+                <p>اكتشف مجموعتنا الفريدة من البدلات الرجالية بأفضل الأسعار.</p>
+                <a href="product.html" class="cta-button">تسوق الآن</a>
+            </div>
+        </section>
+
         <section class="featured-products">
-            <h2>منتجات مميزة</h2>
-            <div class="product">
-                <a href="product.html?id=1"> 
-                    <img src="images/suit1.jpg" alt="بدلة سوداء كلاسيكية">
-                    <h3>بدلة سوداء كلاسيكية</h3>
-                    <p>500 ريال</p>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product.html?id=2">
-                    <img src="images/suit2.jpg" alt="بدلة زرقاء عصرية">
-                    <h3>بدلة زرقاء عصرية</h3>
-                    <p>650 ريال</p>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product.html?id=3">
-                    <img src="images/suit3.jpg" alt="بدلة رمادية فاخرة">
-                    <h3>بدلة رمادية فاخرة</h3>
-                    <p>800 ريال</p>
-                </a>
+            <div class="container">
+                <h2>منتجات مميزة</h2>
+                <div class="product"> 
+                    <a href="product.html?id=1">
+                        <img src="images/suit1.jpg" alt="بدلة سوداء كلاسيكية">
+                        <h3>بدلة سوداء كلاسيكية</h3>
+                        <p>500 ريال</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html?id=2">
+                        <img src="images/suit2.jpg" alt="بدلة زرقاء عصرية">
+                        <h3>بدلة زرقاء عصرية</h3>
+                        <p>650 ريال</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html?id=3">
+                        <img src="images/suit3.jpg" alt="بدلة رمادية فاخرة">
+                        <h3>بدلة رمادية فاخرة</h3>
+                        <p>800 ريال</p>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="social-icons">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
