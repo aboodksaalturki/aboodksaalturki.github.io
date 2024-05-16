@@ -1,55 +1,62 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر الملابس</title>
-<style>
-    .product {
-        display: inline-block;
-        width: 200px;
-        margin: 20px;
-        text-align: center;
-    }
-    .product img {
-        width: 100%;
-        height: auto;
-    }
-    .product a {
-        text-decoration: none;
-        color: inherit;
-    }
-    .product:hover .name {
-        color: red; /* تغيير لون الخط عند التحويم */
-        font-size: 1.2em; /* تغيير حجم الخط عند التحويم */
-    }
-</style>
+    <title>متجر البدلات | الصفحة الرئيسية</title> 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>مرحباً بك في متجر الملابس لدينا!</h1>
 
-<div class="product">
-    <a href="product1.html">
-        <img src="product1.jpg" alt="المنتج ١">
-        <div class="name">اسم المنتج ١</div>
-        <div>19.99 ريال سعودي</div>
-    </a>
-</div>
+    <header>
+        <h1>متجر البدلات</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="product.html">المنتجات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="about.html">عن المتجر</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="product">
-    <a href="product2.html">
-        <img src="product2.jpg" alt="المنتج ٢">
-        <div class="name">اسم المنتج ٢</div>
-        <div>24.99 ريال سعودي</div>
-    </a>
-</div>
+    <main>
+        <section class="featured-products">
+            <h2>منتجات مميزة</h2>
+            <div class="product">
+                <a href="product.html?id=1"> 
+                    <img src="images/suit1.jpg" alt="بدلة سوداء كلاسيكية">
+                    <h3>بدلة سوداء كلاسيكية</h3>
+                    <p>500 ريال</p>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product.html?id=2">
+                    <img src="images/suit2.jpg" alt="بدلة زرقاء عصرية">
+                    <h3>بدلة زرقاء عصرية</h3>
+                    <p>650 ريال</p>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product.html?id=3">
+                    <img src="images/suit3.jpg" alt="بدلة رمادية فاخرة">
+                    <h3>بدلة رمادية فاخرة</h3>
+                    <p>800 ريال</p>
+                </a>
+            </div>
+        </section>
+    </main>
 
-<div class="product">
-    <a href="product3.html">
-        <img src="product3.jpg" alt="المنتج ٣">
-        <div class="name">اسم المنتج ٣</div>
-        <div>29.99 ريال سعودي</div>
-    </a>
-</div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
 </body>
 </html>
