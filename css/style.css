@@ -124,3 +124,29 @@ footer {
 nav a.active {
     font-weight: bold; /* Or any other visual indication */
 }
+/* General Styles */
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h1 img { /* Logo Styling */
+    width: 200px; /* Fixed width */
+    height: 130px; /* Fixed height */
+}
+/* ... (rest of your CSS code) ... */
