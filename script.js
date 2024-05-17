@@ -27,3 +27,24 @@ function toggleAnswer(answerId) {
         answer.style.display = "none";
     }
 }
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
+    
+    // Fetch product data from a JSON file or server
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            const product = products.find(p => p.id == productId);
+            if (product) {
+                document.title = متجر البدلات | ${product.name};
+                document.getElementById('productName').textContent = product.name;
+                document.getElementById('productDescription').textContent = product.description;
+                document.getElementById('productImage').src = product.image;
+                document.querySelector('video source').src = product.video;
+                document.querySelector('video').load();
+            }
+        })
+        .catch(error => console.log('Error loading the product data:', error));
+});
