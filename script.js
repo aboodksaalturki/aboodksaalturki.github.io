@@ -27,24 +27,45 @@ function toggleAnswer(answerId) {
         answer.style.display = "none";
     }
 }
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
+    const products = [
+        {
+            id: '1',
+            name: 'بدلة سوداء كلاسيكية',
+            description: 'تعتبر البدلة السوداء الكلاسيكية خيارًا مثاليًا للرجال الذين يبحثون عن أناقة تقليدية وفخامة...',
+            image: 'images/suit1.jpg',
+            video: 'videos/suit1.mp4'
+        },
+        {
+            id: '2',
+            name: 'بدلة زرقاء عصرية',
+            description: 'استمتع بالمزيج الفريد من الأناقة والعصرية مع بدلة زرقاء عصرية...',
+            image: 'images/suit2.jpg',
+            video: 'videos/suit2.mp4'
+        },
+        {
+            id: '3',
+            name: 'بدلة رمادية فاخرة',
+            description: 'تعكس بدلة رمادية فاخرة الجمال والفخامة في التصميم...',
+            image: 'images/suit3.jpg',
+            video: 'videos/suit3.mp4'
+        }
+    ];
+
+    // Get product ID from URL
     const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
-    
-    // Fetch product data from a JSON file or server
-    fetch('products.json')
-        .then(response => response.json())
-        .then(products => {
-            const product = products.find(p => p.id == productId);
-            if (product) {
-                document.title = متجر البدلات | ${product.name};
-                document.getElementById('productName').textContent = product.name;
-                document.getElementById('productDescription').textContent = product.description;
-                document.getElementById('productImage').src = product.image;
-                document.querySelector('video source').src = product.video;
-                document.querySelector('video').load();
-            }
-        })
-        .catch(error => console.log('Error loading the product data:', error));
+    const productId = params.get('id') || '1';  // Default to first product if no ID is provided
+
+    // Find product by ID
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+        document.getElementById('pageTitle').textContent = `متجر البدلات | ${product.name}`;
+        document.getElementById('productName').textContent = product.name;
+        document.getElementById('productDescription').textContent = product.description;
+        document.getElementById('productImage').src = product.image;
+        document.getElementById('productImage').alt = `صورة ${product.name}`;
+        document.querySelector('#productVideo source').src = product.video;
+        document.getElementById('productVideo').load();
+    }
 });
