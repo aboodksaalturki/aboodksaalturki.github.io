@@ -144,4 +144,29 @@ body {
     margin: 0 auto;
     padding: 0 1rem;
   }
+
+  /* FAQ Styles */
+.faq {
+  margin-top: 2rem;
+}
+
+.question {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.question:hover {
+  background-color: #f1f1f1;
+}
+
+.answer {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  display: none; /* Answers are hidden by default */
+}
   
