@@ -17,3 +17,13 @@ nameInfo.textContent = `الاسم: ${name}`;
 emailInfo.textContent = `الايميل: ${email}`;
 mobileInfo.textContent = `رقم الهاتف: ${mobile}`;
 descriptionInfo.textContent = `الوصف: ${description}`;
+
+// Function to toggle the display of answers in FAQ
+function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    if (answer.style.display === "none") {
+        answer.style.display = "block";
+    } else {
+        answer.style.display = "none";
+    }
+}
