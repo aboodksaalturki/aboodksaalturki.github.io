@@ -134,7 +134,7 @@ footer {
     background-image: url('images/hero-bg.jpg'); /* Replace with actual image */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: black;
     text-align: center;
     padding: 5rem 0;
 }
