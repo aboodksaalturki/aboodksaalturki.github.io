@@ -1,11 +1,26 @@
 /* General Styles */
-body {
-    font-family: 'Noto Kufi Arabic', sans-serif; /* Arabic-friendly font */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Kufi Arabic', sans-serif; /* Arabic-friendly font */
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
 }
 
 /* Header Styles */
