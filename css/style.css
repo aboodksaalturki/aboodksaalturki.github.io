@@ -169,4 +169,10 @@ body {
   border-top: none;
   display: none; /* Answers are hidden by default */
 }
+
+.logo-image {
+    width: 300px;  
+    height: auto; 
+}
+
   
