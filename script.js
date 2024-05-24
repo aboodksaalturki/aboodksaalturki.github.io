@@ -1,3 +1,4 @@
+// Display user information on the Display Page
 const nameInfo = document.getElementById("nameInfo");
 const emailInfo = document.getElementById("emailInfo");
 const mobileInfo = document.getElementById("mobileInfo");
@@ -26,7 +27,9 @@ function toggleAnswer(answerId) {
     } else {
         answer.style.display = "none";
     }
-  document.addEventListener("DOMContentLoaded", function() {
+}
+
+document.addEventListener("DOMContentLoaded", function() {
     var products = {
         '1': {
             name: "Classic Black Suit",
