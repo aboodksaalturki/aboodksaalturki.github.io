@@ -39,7 +39,7 @@ function toggleAnswer(answerId) {
             name: "Modern Blue Suit",
             description: "A modern touch to a traditional suit, ideal for weddings and parties.",
             price: "650 SAR",
-            image: "images/suit2.jpg",
+            image: "images/suit2.jpg" alt="Modern Blue Suit",
             video: "media/suit2.mp4"
         },
         '3': {
