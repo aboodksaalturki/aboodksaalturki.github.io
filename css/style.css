@@ -186,10 +186,18 @@ footer {
 }
 /* Product Details Section Styles */
 #product-details {
-    display: none; /* Hide by default, show when a product is clicked */
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 20px;
+}
+
+.product-detail {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product {
@@ -206,4 +214,3 @@ footer {
     color: #007bff;    /* Change text color on hover (example: blue) */
     font-size: 1.2rem; /* Increase font size on hover */
 }
-
