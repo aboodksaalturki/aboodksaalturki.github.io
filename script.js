@@ -46,7 +46,7 @@ function toggleAnswer(answerId) {
             name: "Luxury Grey Suit",
             description: "Luxury grey suit that combines elegance and comfort for upscale occasions.",
             price: "800 SAR",
-            image: "images/suit3.jpg",
+            image: "images/suit3.jpg" alt="Luxury Grey Suit",
             video: "media/suit3.mp4"
         }
     };
