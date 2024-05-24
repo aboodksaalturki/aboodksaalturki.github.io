@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suits Store | Home</title>
+    <title>Suits Store | Products</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,8 +14,8 @@
             <h1><a href="index.html"><img src="images/logo.jpg" alt="Suits Store"></a></h1>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="product.html">Products</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html" class="active">Products</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -23,60 +23,32 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
-        <h1 id="productName"></h1>
-        <p id="productDescription"></p>
-        <img id="productImage" src="" alt="Product Image">
-        <video id="productVideo" controls>
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="container" id="productContent">
+            <h2 id="productName">Product Name</h2>
+            <img id="productImage" src="images/default.jpg" alt="Product Image" style="width:100%;max-width:300px;height:auto;">
+            <p id="productDescription">Description of the product goes here.</p>
+            <p id="productPrice">Price: $0.00</p>
+            <video id="productVideo" controls style="width:100%;max-width:480px;">
+                <source src="media/product.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </main>
 
     <footer>
-        <!-- Footer content -->
+        <div class="container">
+            <p>&copy; 2023 Suits Store. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // JavaScript to dynamically update product details
-        const products = {
-            '1': {
-                name: 'Classic Black Suit',
-                description: 'Description: Experience timeless elegance with our Classic Black Suit, perfect for formal events and business meetings. Crafted from premium wool, this suit offers a sleek, tailored fit that exudes professionalism and style.
-',
-                imageUrl: 'path/to/image1.jpg',
-                videoUrl: 'path/to/video1.mp4'
-            },
-            '2': {
-                name: 'Modern Blue Suit',
-                description: 'Description: Stand out with our Modern Blue Suit, a contemporary take on classic suiting. Featuring a vibrant blue hue and a modern slim fit, this suit is ideal for those looking to make a bold fashion statement at any occasion.
-',
-                imageUrl: 'path/to/image2.jpg',
-                videoUrl: 'path/to/video2.mp4'
-            },
-            '3': {
-                name: 'Luxury Grey Suit',
-                description: 'Description: Elevate your wardrobe with our Luxury Grey Suit, designed for sophistication and distinction. Made from superior-quality fabric, this suit provides a luxurious feel and impeccable style for upscale events and important business functions.
-',
-                imageUrl: 'path/to/image3.jpg',
-                videoUrl: 'path/to/video3.mp4'
-            }
-        };
-
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const productId = params.get('id');
-            const product = products[productId];
-
-            if (product) {
-                document.getElementById('productName').textContent = product.name;
-                document.getElementById('productDescription').textContent = product.description;
-                document.getElementById('productImage').src = product.imageUrl;
-                document.getElementById('productImage').alt = product.name + ' Image';
-                document.getElementById('productVideo').firstElementChild.src = product.videoUrl;
-            }
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
