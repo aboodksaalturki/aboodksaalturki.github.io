@@ -62,4 +62,3 @@ function toggleAnswer(answerId) {
     document.getElementById('productImage').alt = product.name;
     document.getElementById('productVideo').children[0].src = product.video; // Assuming there's a single <source> inside <video>
 });
-}
