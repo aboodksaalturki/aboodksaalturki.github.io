@@ -25,16 +25,34 @@
     </header>
 
     <main>
-        <div class="container" id="productContent">
-            <h2 id="productName">Product Name</h2>
-            <img id="productImage" src="images/default.jpg" alt="Product Image" style="width:100%;max-width:300px;height:auto;">
-            <p id="productDescription">Description of the product goes here.</p>
-            <p id="productPrice">Price: $0.00</p>
-            <video id="productVideo" controls style="width:100%;max-width:480px;">
-                <source src="media/product.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+      <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="products-grid"> 
+                    <div class="product">
+                        <a href="product.html?id=1">
+                            <img src="images/suit1.jpg" alt="Classic Black Suit">
+                            <h3>Classic Black Suit</h3>
+                            <p>500 SAR</p>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="product.html?id=2">
+                            <img src="images/suit2.jpg" alt="Modern Blue Suit">
+                            <h3>Modern Blue Suit</h3>
+                            <p>650 SAR</p>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="product.html?id=3">
+                            <img src="images/suit3.jpg" alt="Luxury Grey Suit">
+                            <h3>Luxury Grey Suit</h3>
+                            <p>800 SAR</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
