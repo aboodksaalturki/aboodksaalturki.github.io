@@ -184,3 +184,26 @@ footer {
     border-top: none;
     display: none; /* Answers are hidden by default */
 }
+/* Product Details Section Styles */
+#product-details {
+    display: none; /* Hide by default, show when a product is clicked */
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.product {
+    cursor: pointer;
+}
+
+/* Product Hover Effect */
+.product:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.product:hover h3 {
+    color: #007bff;    /* Change text color on hover (example: blue) */
+    font-size: 1.2rem; /* Increase font size on hover */
+}
+
