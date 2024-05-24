@@ -1,56 +1,70 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر البدلات | الصفحة الرئيسية</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Product Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <h1><a href="index.html"><img src="images/logo.jpg" alt="متجر البدلات"></a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">الرئيسية</a></li>
-                    <li><a href="product.html">المنتجات</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                    <li><a href="about.html">عن المتجر</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- Navigation and other header content -->
     </header>
-
+    
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2>أحدث صيحات الموضة في عالم البدلات</h2>
-                <p>اكتشف مجموعتنا الفريدة من البدلات الرجالية بأفضل الأسعار.</p>
-                <a href="product.html" class="cta-button">تسوق الآن</a>
-            </div>
-        </section>
-
-        <section class="featured-products">
-            <div class="container">
-                <h2>W.I.P</h2>
-        </section>
+        <h1 id="productName"></h1>
+        <p id="productDescription"></p>
+        <img id="productImage" src="" alt="Product Image">
+        <video id="productVideo" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 متجر البدلات. جميع الحقوق محفوظة.</p>
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
+        <!-- Footer content -->
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript to dynamically update product details
+        const products = {
+            '1': {
+                name: 'Classic Black Suit',
+                description: 'Description: Experience timeless elegance with our Classic Black Suit, perfect for formal events and business meetings. Crafted from premium wool, this suit offers a sleek, tailored fit that exudes professionalism and style.
+',
+                imageUrl: 'path/to/image1.jpg',
+                videoUrl: 'path/to/video1.mp4'
+            },
+            '2': {
+                name: 'Modern Blue Suit',
+                description: 'Description: Stand out with our Modern Blue Suit, a contemporary take on classic suiting. Featuring a vibrant blue hue and a modern slim fit, this suit is ideal for those looking to make a bold fashion statement at any occasion.
+',
+                imageUrl: 'path/to/image2.jpg',
+                videoUrl: 'path/to/video2.mp4'
+            },
+            '3': {
+                name: 'Luxury Grey Suit',
+                description: 'Description: Elevate your wardrobe with our Luxury Grey Suit, designed for sophistication and distinction. Made from superior-quality fabric, this suit provides a luxurious feel and impeccable style for upscale events and important business functions.
+',
+                imageUrl: 'path/to/image3.jpg',
+                videoUrl: 'path/to/video3.mp4'
+            }
+        };
+
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const product = products[productId];
+
+            if (product) {
+                document.getElementById('productName').textContent = product.name;
+                document.getElementById('productDescription').textContent = product.description;
+                document.getElementById('productImage').src = product.imageUrl;
+                document.getElementById('productImage').alt = product.name + ' Image';
+                document.getElementById('productVideo').firstElementChild.src = product.videoUrl;
+            }
+        };
+    </script>
 </body>
 </html>
