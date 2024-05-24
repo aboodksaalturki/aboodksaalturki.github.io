@@ -32,7 +32,7 @@ function toggleAnswer(answerId) {
             name: "Classic Black Suit",
             description: "This classic black suit is perfect for formal events and business meetings.",
             price: "500 SAR",
-            image: "images/suit1.jpg",
+            image: "images/suit1.jpg" alt="Classic Black Suit",
             video: "media/suit1.mp4"
         },
         '2': {
