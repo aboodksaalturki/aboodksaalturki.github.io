@@ -26,7 +26,7 @@ function toggleAnswer(answerId) {
     } else {
         answer.style.display = "none";
     }
-   document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
     var products = {
         '1': {
             name: "Classic Black Suit",
@@ -54,14 +54,45 @@ function toggleAnswer(answerId) {
     function showProductDetails(productId) {
         var product = products[productId];
 
-        document.getElementById('productName').textContent = product.name;
-        document.getElementById('productDescription').textContent = product.description;
-        document.getElementById('productPrice').textContent = product.price;
-        document.getElementById('productImage').src = product.image;
-        document.getElementById('productImage').alt = product.name;
-        document.getElementById('productVideo').children[0].src = product.video;
+        // Create a new product detail section
+        var productDetailSection = document.createElement('div');
+        productDetailSection.className = 'product-detail';
 
-        document.getElementById('product-details').style.display = 'block';
+        var productName = document.createElement('h2');
+        productName.textContent = product.name;
+
+        var productImage = document.createElement('img');
+        productImage.src = product.image;
+        productImage.alt = product.name;
+        productImage.style.width = '100%';
+        productImage.style.maxWidth = '300px';
+        productImage.style.height = 'auto';
+
+        var productDescription = document.createElement('p');
+        productDescription.textContent = product.description;
+
+        var productPrice = document.createElement('p');
+        productPrice.textContent = 'Price: ' + product.price;
+
+        var productVideo = document.createElement('video');
+        productVideo.controls = true;
+        productVideo.style.width = '100%';
+        productVideo.style.maxWidth = '480px';
+        
+        var videoSource = document.createElement('source');
+        videoSource.src = product.video;
+        videoSource.type = 'video/mp4';
+        productVideo.appendChild(videoSource);
+
+        // Append the elements to the product detail section
+        productDetailSection.appendChild(productName);
+        productDetailSection.appendChild(productImage);
+        productDetailSection.appendChild(productDescription);
+        productDetailSection.appendChild(productPrice);
+        productDetailSection.appendChild(productVideo);
+
+        // Append the new product detail section to the container
+        document.getElementById('product-details').appendChild(productDetailSection);
     }
 
     document.querySelectorAll('.product').forEach(function(element) {
