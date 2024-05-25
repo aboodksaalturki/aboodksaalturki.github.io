@@ -91,6 +91,7 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Add cursor pointer for better UX */
 }
 
 .product img {
@@ -105,12 +106,12 @@ h2 {
 }
 
 /* Product Hover Effect */
-.product a:hover img {
+.product:hover img {
     transform: scale(1.1); /* Slightly enlarge the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
-.product a:hover h3 {
+.product:hover h3 {
     color: #007bff;    /* Change text color on hover (example: blue) */
     font-size: 1.2rem; /* Increase font size on hover */
 }
@@ -184,11 +185,13 @@ footer {
     border-top: none;
     display: none; /* Answers are hidden by default */
 }
+
 /* Product Details Section Styles */
 #product-details {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 20px;
+    display: none; /* Hide initially */
 }
 
 .product-detail {
@@ -200,17 +203,24 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.product {
+/* Back to Products Button Styles */
+#product-details button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
-/* Product Hover Effect */
-.product:hover img {
-    transform: scale(1.1); /* Slightly enlarge the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+#product-details button:hover {
+    background-color: #0056b3;
 }
 
-.product:hover h3 {
-    color: #007bff;    /* Change text color on hover (example: blue) */
-    font-size: 1.2rem; /* Increase font size on hover */
+/* Hidden Class */
+.hidden {
+    display: none;
 }
