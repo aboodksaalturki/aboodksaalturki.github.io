@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>متجر البدلات | اتصل بنا</title>
+  <title>Suits Store | Contact Us</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="index.html"><img src="images/logo.jpg" alt="متجر البدلات"></a></h1>
+            <h1><a href="index.html"><img src="images/logo.jpg" alt="Suits Store"></a></h1>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">الرئيسية</a></li>
-                    <li><a href="product.html">المنتجات</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                    <li><a href="about.html">عن المتجر</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
   <div class="container">
-    <h1>اتصل بنا</h1>
-    <p>نرحب بك في صفحة التواصل معنا، يرجى ملء النموذج أدناه لإرسال رسالتك.</p>
+    <h1>Contact Us</h1>
+    <p>Welcome to our contact page. Please fill out the form below to send us your message.</p>
 
     <form id="contactForm" action="display.html" method="GET">
       <div>
-        <label for="name">الاسم كامل:</label>
-        <input type="text" id="name" name="name" required placeholder="أدخل الاسم">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
       </div>
       <div>
-        <label for="email">الايميل:</label>
-        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="الرجاء إدخال عنوان بريد إلكتروني صالح." placeholder="أدخل الايميل">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address." placeholder="Enter your email">
       </div>
       <div>
-        <label for="mobile">رقم الهاتف:</label>
-        <input type="tel" id="mobile" name="mobile" required pattern="^\+966[0-9]{8,12}$" title="يجب أن يبدأ رقم الهاتف بـ +966 ويتبعه من 8 إلى 12 رقمًا." placeholder="أدخل رقم الهاتف">
+        <label for="mobile">Phone Number:</label>
+        <input type="tel" id="mobile" name="mobile" required pattern="^\+966[0-9]{8,12}$" title="Phone number must start with +966 followed by 8 to 12 digits." placeholder="Enter your phone number">
       </div>
       <div>
-        <label for="description">الوصف:</label>
-        <textarea id="description" name="description" required placeholder="أدخل الوصف"></textarea>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required placeholder="Enter your message"></textarea>
       </div>
-      <button type="submit">إرسال</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 
