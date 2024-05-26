@@ -14,10 +14,10 @@ const mobile = urlParams.get("mobile");
 const description = urlParams.get("description");
 
 // Display user information with labels and proper formatting
-nameInfo.textContent = `الاسم: ${name}`;
-emailInfo.textContent = `الايميل: ${email}`;
-mobileInfo.textContent = `رقم الهاتف: ${mobile}`;
-descriptionInfo.textContent = `الوصف: ${description}`;
+nameInfo.textContent = `Name: ${name}`;
+emailInfo.textContent = `Email: ${email}`;
+mobileInfo.textContent = `Phone Number: ${mobile}`;
+descriptionInfo.textContent = `Description: ${description}`;
 
 // Function to toggle the display of answers in FAQ
 function toggleAnswer(answerId) {
@@ -28,6 +28,4 @@ function toggleAnswer(answerId) {
         answer.style.display = "none";
     }
 }
-
-
 
